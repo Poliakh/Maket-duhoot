@@ -27,11 +27,11 @@ let gulp			= require ('gulp'),
 			html:	'build/',
 			js:		'build/script/',
 			style:	'build/css/',
-			img:	'build/img/',
+			img:	'build/image/',//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! /img/
 			fonts:	'build/fonts/'
 		},
 		src: { //Пути откуда брать исходники
-			block:'src/blocks',
+			block:'src/blocks/',
 			html:	'src/*.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
 			js:		'src/script/**/*.js',//В стилях и скриптах нам понадобятся только main файлы
 			scss:	'src/scss/style.scss',
@@ -41,6 +41,7 @@ let gulp			= require ('gulp'),
 		},
 		watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
 			html:	'src/**/*.html',
+			block:	'src/blocks',
 			js:		'src/script/**/*.js',
 			scss:	'src/scss/**/*.scss',
 			css:	'src/css/**/*.css',
@@ -53,41 +54,57 @@ let gulp			= require ('gulp'),
 	};
 
 
-gulp.task('my', () => {
-	console.log('hello world!!!');
+gulp.task('my', ()=>{
+	// console.log('hello world!!!');
+	gulp.src(path.src.scss)
+	.pipe(gulp.dest(path.produc))
+
 });
 
-gulp.task('create', () => {
-	gulp.src('*.*', {read: false})
-	.pipe(gulp.dest('./test/css'))
+gulp.task('create', ()=>{
+	// gulp.src('*.*', {read: false})
+	gulp.start('build');
+	gulp.start('my');
+	gulp.src(path.dir)
+		.pipe(gulp.dest(path.produc))
 });
 
 // watch
-gulp.task('default',['build','server'], () => {
+gulp.task('default',['build','server'], ()=>{
 	gulp.watch(path.watch.html, ['htmlmin']);
+	gulp.watch(path.watch.block, ['htmlmin']);
 	gulp.watch(path.watch.scss, ['sass']);
+	gulp.watch(path.watch.css, ['css']);
 	gulp.watch(path.watch.js, ['script']);
 	gulp.watch(path.watch.img, ['img']);
 });
-// для запуска   gulp export --prod
-gulp.task('export',['build'], ()=>{
-		gulp.src(path.build.html + '**/*.*')
-	.pipe(gulpif(argv.prod, gulp.dest(path.produc)));
-
+// для запуска версии prodaction
+//	gulp build --prod  - создает версию с компрессией
+//	gulp prod - переносит в папку  prodaction
+gulp.task('ex',['build','prod'], ()=>{
+	// gulp.start('prod')
+	// gulp.src(path.dir)
+	// .pipe(gulp.dest(path.produc));
+	// .pipe(gulpif(argv.prod, gulp.dest(path.produc)));
 })
+gulp.task('prod',['cleanProd'],()=>{
+	gulp.src(path.dir+'/**/*.*')
+		.pipe(gulp.dest(path.produc));
+});
 //Сборка проекта
-gulp.task('build',['clean','htmlmin','sass','script','img'], () => {
+gulp.task('build',['clean','htmlmin','sass','css','script','img'], ()=>{
 	gulp.src(path.src.fonts)
 		.pipe(gulp.dest(path.build.fonts));
 });
 
 
 //posthtml-include, posthtml-minifier или htmlnano.
-gulp.task('htmlmin', () => {
+gulp.task('htmlmin', ()=>{
 	gulp.src(path.src.html)
 		.pipe(sourcemaps.init())
 		.pipe(plumber())
-		.pipe(gulpImport(path.src.blocks))
+		.pipe(gulpImport(path.src.block))
+		.pipe(gulpImport(path.src.block + 'other/'))
 		.pipe(gulpif(argv.prod,
 			htmlMin({collapseWhitespace: true,removeComments: true})))
 		.pipe(gulpif(!argv.prod, sourcemaps.write()))
@@ -96,7 +113,7 @@ gulp.task('htmlmin', () => {
 });
 
 //style
-gulp.task('sass', () => {
+gulp.task('sass', ()=>{
 	gulp.src(path.src.scss)
 	.pipe(sourcemaps.init())
 	.pipe( sass()
@@ -121,18 +138,17 @@ gulp.task('sass', () => {
 
 
 //css - работает
-// gulp.task('style',['sass'], () => {
-// 	gulp.src(path.src.css)
-// 		.pipe(concat('style.css'))
-// 		//.pipe(cssnano())
-// 		//.pipe(rename({suffix:'.min'}))
-// 		.pipe(gulp.dest(path.build.style))
-// 		.pipe(browserSync.reload({stream:true}));
-// });
-
+gulp.task('css',/* ['sass'], */ ()=>{
+	gulp.src(path.src.css)
+		// .pipe(concat('style.css'))
+		// .pipe(cssnano())
+		// .pipe(rename({suffix:'.min'}))
+		.pipe(gulp.dest(path.build.style))
+		.pipe(browserSync.reload({stream:true}));
+});
 
 //script
-gulp.task('script', () => {
+gulp.task('script', ()=>{
 	gulp.src(path.src.js)
 		.pipe(sourcemaps.init())
 		.pipe(plumber())
@@ -146,7 +162,7 @@ gulp.task('script', () => {
 		// .pipe(browserSync.reload({stream:true})); //незачем
 });
 
-gulp.task('server',() => {
+gulp.task('server',()=>{
 	browserSync({
 		server:{
 			baseDir:'build'
@@ -155,7 +171,7 @@ gulp.task('server',() => {
 	})
 });
 
-gulp.task('img', () => {
+gulp.task('img', ()=>{
 	gulp.src(path.src.img) // Берем все изображения из src
 		.pipe(cache(imagemin({  // Сжимаем их с наилучшими настройками с учетом кеширования
 			interlaced: true,
@@ -168,11 +184,14 @@ gulp.task('img', () => {
 });
 
 //удаление папки дистрибутива
-gulp.task('clean', () => {
+gulp.task('clean', ()=>{
 	del.sync(path.dir);
+});
+gulp.task('cleanProd', ()=>{
+	del.sync(path.produc);
 });
 
 //чистка кеша в случае проблемс картинками например.
-gulp.task('clear',  () => { 
+gulp.task('clear',  ()=>{ 
 	cache.clearAll();
 })
