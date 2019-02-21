@@ -1,0 +1,256 @@
+//filter
+
+.filter{
+	min-height: 60px;
+	background-color: #fff;
+	font-family: 'Gotham-medium';
+	font-weight: 500;
+	border-bottom:1px solid #e1dddf;
+	&__container{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		.active {
+			border-radius: 19px 19px 0 0;
+			// border-bottom: none;
+		}
+	}
+	
+	.drop{
+		margin: 0;
+		padding: 0;
+		border-top: none;
+		display: none;
+		position: absolute;
+		top: 35px;
+		left:6px;
+		width: 94px;
+		z-index: 50;
+
+		&__item{
+			width: inherit;
+			list-style: none;
+			cursor: pointer;
+			background-position: 10px -119px;
+			border:1px solid #96a6a7;
+			border-top:none;
+			background-color: rgb(255, 255, 255);
+
+			overflow: hidden;
+			white-space:nowrap;
+			text-overflow: ellipsis;
+			-o-text-overflow: ellipsis;	
+
+
+			&:last-child{
+				border-radius:0 0 19px 19px;
+			}
+			&:hover {
+				background-color: rgb(241, 241, 241);
+				color:#74898b;
+			}
+		}
+		&__link {
+			font-size: 12px;
+			line-height: 33px;
+			font-family: 'Gotham-medium';
+			color: #96a6a7;
+			text-transform: uppercase;
+			padding-left:10px;
+		
+		}
+	}
+
+}
+.priority{
+	overflow: hidden;
+	margin-right: -6px;
+	margin-right: -6px;
+	display: flex;
+	justify-content: space-between;
+
+}
+.sort-item{
+color: #96a6a7;
+font-family: 'Gotham-medium';
+font-weight: 500;
+font-size: 12px;
+line-height: 48px;
+text-transform: uppercase;
+text-decoration: none;
+margin:0 6px;
+	&:hover{
+		color:#74898b;
+		text-shadow: 0 0 2px rgba(36, 36, 36, 0.3);
+	}
+	&:active{
+		color: #e94e38;
+
+	}
+}
+.butSelelct{
+	margin: 12px 0;
+	display: flex;
+	.slct>.drop__link{
+		padding-left:0;
+		color: #e94e38;
+	}
+
+	&__slct{
+		width: 94px;
+		height: 35px;
+		margin:0 6px;
+		border-radius:19px;
+		padding:0px 0 0 19px;
+		border:1px solid #96a6a7;
+		font-size: 12px;
+		line-height: 33px;
+		font-family: 'Gotham-medium';
+		background-color: #fff;
+		text-transform: uppercase;
+		color:#e94e38;
+		padding-left:3px;
+	}
+	&__button-filt{
+		width: 125px;
+		height: 35px;
+		margin: 0 6px;
+		background-color: #1baf5d;
+		color: #fff;
+		padding: 0;
+		font-family: 'Gotham-medium';
+		text-transform: uppercase;
+		font-size: 12px;
+		line-height: 33px;
+		box-shadow: none;
+		border:none;
+		&::after{
+			content: '';
+			display: inline-block;
+			width: 8px;
+			height: 12px;
+			margin-left: 13px;
+			background: url('../image/icon/geo_icon.svg') no-repeat center /contain;
+		}
+		&:hover{
+			@extend .hover-white;
+			background-color: #24b666;
+		}
+	}
+	&__districs{
+		position: relative;
+		transition: 0.5s;
+		
+		.slct:before {
+			left: 72px;
+			z-index: 5000;
+			bottom: 2px;
+			border-color: #a0b4b8;
+			border-width: 2px 0 0 2px;
+			width: 5px;
+			height: 5px;
+		}
+
+
+	}
+}
+
+
+.filterBut{
+	min-width: 306px;
+    min-height: 60px;
+	display: flex;
+    justify-content: space-between;
+	align-items: center;
+	
+}
+
+.filtText{
+	color: #96a6a7;
+	font-family: 'Gotham-medium';
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 60px;
+	text-transform: uppercase;
+	padding-right: 10px;
+}
+
+.cirBut-small{
+	width: 40px;
+	height: 40px;
+	border-radius:50%;
+	background-color: gray;
+	// margin:10px 5px;
+	background-position: center;
+	box-sizing: border-box;
+	&:hover{
+		box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.3),
+		0 0 5px rgba(82, 82, 82, 0.3), 0 0 15px rgba(109, 109, 109, 0.6);;
+		// border: 1px solid rgba(128, 128, 128, 0.3)
+		transition: 0.2s;
+	}
+}
+.hause{
+	background: url('../image/icon/hause_icon.svg') no-repeat center 44%/24px 19px;
+}
+.girl{
+	background: url('../image/icon/girl_icon.svg') no-repeat center 46%/16px 19px;
+}
+.cap{
+	background: url('../image/icon/cap_icon.svg') no-repeat center 46% /29px 19px;
+}
+.note{
+	background: url('../image/icon/8_icon.svg') no-repeat 48% 46%/19px 19px;
+}
+.bus{
+	background: url('../image/icon/bus_icon.svg') no-repeat center 46%/18px 19px;
+}
+.green{
+	background-color: $green;
+}
+.gray{
+	background-color: #b6c0c1;
+}
+.yellow{
+	background-color: $yellow;
+}
+.purple{
+	background-color: $purple;
+}
+
+@media screen and (max-width:900px){
+	.filter__container{
+		justify-content: space-around;
+	}
+	.priority--cont{
+		width: 100%;
+	}
+	.priority{
+		max-width: 300px;
+		margin-right: auto;
+		margin-left: auto;
+
+	}
+	.butSelelct{
+		order: 3;
+	}
+	.filterBut{
+		order:3;
+		margin: 0 15px;
+
+	}
+	
+}
+@media screen and (max-width:610px){
+	.filtText{
+		display: none;
+	}
+	.butSelelct{
+		order: 4;
+	}
+	.filterBut{
+		min-width: 260px;
+	}
+}

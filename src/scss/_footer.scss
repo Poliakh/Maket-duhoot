@@ -1,0 +1,159 @@
+.footer{
+	width: 100%;
+	min-height:500px; 
+	background: url('../image/2-layers.jpg') no-repeat center top /cover;
+	&__heading{
+		text-shadow: 0 1px 1px rgba(0, 0, 1, 0.15);
+		color: #ffffff;
+		font-family: 'Gotham-medium';
+		font-weight: 500;
+		font-size: 24px;
+		line-height: 30px;
+		text-align: center;
+		margin: 0;
+		padding-top: 55px;
+		margin-bottom: 40px;
+	}
+	&__form{
+		max-width: 492px;
+		display: flex;
+		justify-content: center;
+		margin: auto;
+		position: relative;
+	
+	}
+	&__input{
+		min-width: 100%;
+		height: 60px;
+
+	}
+	&__input--icon{
+		padding-left:69px;
+		background: url("../image/icon/envelope_icon.svg") no-repeat 33px center  /18px 15px;
+	}
+	&__button{
+		position: absolute;
+		right: 5px;
+		top: 5px;
+
+	}
+	&__button--foot{
+		height: 50px;
+		padding: 1px 30px 5px 30px;
+		font-size: 14px;
+
+	}
+}
+.contact{
+	min-height: 255px;
+	&:before{
+		content:'';
+		display: block;
+		border-top:1px solid rgba(255, 255, 255, 0.1);
+		margin-top: 57px;
+	}
+	&__container{
+		margin-top: 40px;
+		display: flex;
+		justify-content: space-around;
+	}
+	
+
+	}
+
+.footNav{
+	margin: 0 40px;
+
+	&__Head{
+		color: #fff;
+		font-family: 'Gotham-medium';
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 20px;
+		border-bottom: 1px solid  #c0bebc;
+		display: inline-block;
+	}
+	
+	&__menu{
+		list-style: none;
+		text-align: left;
+		padding: 0;
+
+	}
+	&__submenu{
+		:hover{
+			cursor: pointer;
+			text-decoration: underline;
+			text-shadow: 0 0 3px rgba(255, 255, 255, 0.7);
+		}
+
+	}
+	&__link{
+		text-decoration: none;
+		color: #c0bebc;
+		font-family: "Gotham-Book";
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 24px;
+	}
+}
+.copyright{
+	@extend .footNav__link;
+	color: #fff;
+}
+.follow{
+	&__icon{
+		width: 158px;
+		display: flex;
+		justify-content: space-between;
+		margin-top: 26px;
+
+	}
+
+	&__link{
+		text-decoration: none;
+		font-size: 29px;
+		color:#fff;
+		transition: 0.5s;
+
+		&:hover{
+			text-shadow: 0 0 5px #fff;
+			transform: scale(1.3);
+			transition: 0.3s;
+		}
+	}
+}
+
+
+@media screen and (max-width:610px){
+	.contact__container{
+		flex-wrap: wrap;
+	}
+	.follow{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+@media screen and (max-width:380px){
+	.footer{
+		&__input--icon {
+			padding-left: 14%;
+		}
+		&__input--icon{
+			background-position: 6% center;
+		}
+		.footer__button--foot {
+			padding: 1px 5% 5px 5%;
+		}
+		.footNav__Head{
+			margin-bottom: 0;
+		}
+		.follow{
+			margin-bottom: 50px;
+		}
+		
+	}
+
+}
