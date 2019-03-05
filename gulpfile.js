@@ -49,7 +49,7 @@ let gulp			= require ('gulp'),
 			fonts:	'src/fonts/**/*.*'
 		},
 		dir: 'build',
-		produc:'production/',
+		produc:'../poliakh.github.io/duhoot',
 		test : 'test'
 	};
 
@@ -103,6 +103,7 @@ gulp.task('htmlmin', ()=>{
 	gulp.src(path.src.html)
 		.pipe(sourcemaps.init())
 		.pipe(plumber())
+		.pipe(gulpImport(path.src.block))
 		.pipe(gulpImport(path.src.block))
 		.pipe(gulpImport(path.src.block + 'other/'))
 		.pipe(gulpif(argv.prod,
