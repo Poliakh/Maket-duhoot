@@ -1,8 +1,24 @@
-<svg height="19" viewBox="0 0 7.67282 5.02702" width="29" xmlns="http://www.w3.org/2000/svg">
-<g fill="none" stroke="#fff" transform="matrix(.31584336 0 0 .31584336 -.111454 -86.391253)">
-<path d="m351.82751 338.259h11.433285v11.433285h-11.433285z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.475656" transform="matrix(.9171653 .39850699 -.9171653 .39850699 0 0)"/>
-<path d="m4.5180378 280.72941v5.21222s2.9456994 2.68784 7.6459982 2.70635c4.700299.0185 8.115489-2.53931 8.115489-2.53931v-5.24561" stroke-linejoin="round" stroke-width="1.58748"/>
-<path d="m23.719872 283.31031v3.3456" stroke-linecap="round" stroke-width="1.85206"/>
-<path d="m23.719872 282.90067v-3.3422" stroke-width=".606737"/>
-</g>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X8 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="100px" height="62px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 100 62"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:cc="http://creativecommons.org/ns#"
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:svg="http://www.w3.org/2000/svg">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil0 {fill:#2B2A29;fill-rule:nonzero}
+   ]]>
+  </style>
+ </defs>
+ <g id="Слой_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="g10">
+   <path id="path8" class="fil0" d="M50 0c-2,0 -4,0 -5,1l-43 18c-1,1 -2,2 -2,2 0,1 1,2 2,3l12 5 0 19c0,0 0,0 0,0 0,1 0,2 1,2 0,0 13,12 34,12 20,0 35,-11 35,-11 1,-1 1,-2 1,-3l0 -19 10 -4 0 8c-2,1 -3,2 -3,4 0,0 0,0 0,0l0 14c0,2 2,3 4,3 2,0 4,-1 4,-3l0 -14c0,0 0,0 0,0 0,-2 -1,-3 -3,-4l0 -9 1 0c1,-1 2,-2 2,-3 0,0 -1,-1 -2,-2l-44 -18c-1,-1 -2,-1 -4,-1 0,0 0,0 0,0zm0 7l34 14 -34 15 -34 -15 34 -14zm-30 25l25 10c1,1 3,1 5,1 2,0 3,0 4,-1l25 -10 0 15c-2,1 -14,9 -30,9 -17,0 -27,-9 -29,-10l0 -14z"/>
+  </g>
+ </g>
 </svg>

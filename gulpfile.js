@@ -32,6 +32,7 @@ let gulp			= require ('gulp'),
 			fonts:	'build/fonts/'
 		},
 		src: { //Пути откуда брать исходники
+			src:'src/',
 			block:'src/blocks/',
 			html:	'src/*.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
 			js:		'src/script/**/*.js',//В стилях и скриптах нам понадобятся только main файлы
@@ -154,9 +155,9 @@ gulp.task('script', ()=>{
 		.pipe(sourcemaps.init())
 		.pipe(plumber())
 		.pipe(concat('script.js'))
-		.pipe(babel({
-			presets: ['@babel/env']
-		}))
+		// .pipe(babel({
+		// 	presets: ['@babel/env']
+		// }))
 		.pipe(gulpif(argv.prod, uglify()))//минимазция js
 		.pipe(gulpif(!argv.prod, sourcemaps.write()))
 		.pipe(gulp.dest(path.build.js))
