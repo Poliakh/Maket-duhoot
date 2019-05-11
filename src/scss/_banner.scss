@@ -59,37 +59,8 @@
 	font-weight: 400;
 	line-height: 50px;
 }
-.exper{
-	font-size: 0;
-}
-.iconSprite{
-	padding: 3px;
-	fill:rgb(255, 134, 249);
-	height: 30px;
-	width: 50px;
-	background-color: rgba(0, 0, 0, 0.164);
-}
-.starIcon{
-	height: 30px;
-	width: 50px;
-	fill:none;
-	stroke:#ea9e2b;
-	stroke-width:0.36252287;
-	stroke-linecap:round;
-	&:hover{
-		fill:#ea9e2b;
-		stroke:#ea9e2b*1.2;
 
-	}
-}
-.starFill{
-	fill:#ea9e2b;
-	stroke:#ea9e2b;
-	stroke-width:0.36252287;
-	stroke-linecap:round;
-}
-
-
+//--end sprite-------------------------------------------------------
 .districs, .educat{
 	position: relative;
 	min-width: 220px;

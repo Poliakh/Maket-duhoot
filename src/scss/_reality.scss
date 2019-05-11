@@ -32,18 +32,12 @@
 		flex-direction: row;
 		justify-content: space-around;
 		flex-wrap: wrap;
-
 	}
 	&__lead{
 		margin-top: 17px;
 	}
-
 }
 
-.colorIcon{
-	stroke: #9dacad;
-
-}
 %bicon{
 	display: block;
 	margin-right: auto;
@@ -56,6 +50,15 @@
 	border: 2px solid #9dacad;
 	border-radius: 50%;
 	margin: 15px;
+	stroke: #9dacad;
+	fill: #9dacad;
+	&:hover{
+		border-color: $green;
+		box-shadow: inset 0 0 30px rgba(27, 175, 94, 0.2),
+		0 0 30px rgba(27, 175, 94, 0.2);
+		transition: 0.3s;
+		fill:$green;
+	}
 	&__cap{
 		@extend %bicon;
 		width: 50px;
@@ -68,11 +71,12 @@
 		height: 40px;
 		margin-top: 30px;
 	}
-	&__girle{
+	&__girl{
 		@extend %bicon;
 		width: 38px;
 		height: 45px;
 		margin-top: 28px;
+		stroke-width:0.1;
 	}
 	&__note{
 		@extend %bicon;
@@ -170,12 +174,18 @@
 		background-color: $green;
 
 		&--flash{
-			background: url('../image/icon/flash_icon.svg') no-repeat center 54% / 17px auto ;
-			background-color: $green;
+			fill:white;
+			width: 19px;
+			height: 100%;
+			display: block;
+			margin: auto;
 		}
 		&--leaf{
-			background: url('../image/icon/leaf_icon.svg') no-repeat center 48% / 30px auto ;
-			background-color: $green;
+			fill:white;
+			width: 30px;
+			height: 100%;
+			display: block;
+			margin: auto;
 		}
 	
 	

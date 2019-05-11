@@ -192,21 +192,33 @@ margin:0 6px;
 		transition: 0.2s;
 	}
 }
-.hause{
-	background: url('../image/icon/hause_icon.svg') no-repeat center 44%/24px 19px;
+.iconFilter{
+	height:19px;
+	width: 24px;
+	display: block;
+	margin:auto ;
+	margin-top: 25%;
+	fill: white;
 }
-.girl{
-	background: url('../image/icon/girl_icon.svg') no-repeat center 46%/16px 19px;
-}
-.cap{
-	background: url('../image/icon/cap_icon.svg') no-repeat center 46% /29px 19px;
-}
-.note{
-	background: url('../image/icon/8_icon.svg') no-repeat 48% 46%/19px 19px;
-}
-.bus{
-	background: url('../image/icon/bus_icon.svg') no-repeat center 46%/18px 19px;
-}
+// .hause{
+// 	height:19px;
+// 	width: 24px;
+// 	display: block;
+// 	margin:auto ;
+// 	margin-top: 25%;
+// }
+// .girl{
+// 	@extend .hause;
+// }
+// .cap{
+// 	@extend .hause;
+// }
+// .note{
+// 	@extend .hause;
+// }
+// .bus{
+// 	@extend .hause;
+// }
 .green{
 	background-color: $green;
 }

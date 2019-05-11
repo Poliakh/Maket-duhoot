@@ -72,10 +72,15 @@
 .search{
 	width: 74px;
 	min-height: inherit;
-	background: url("../image/icon/search_icon.svg") no-repeat center;
+	height: inherit;
 	background-color: #e2dee0;
-	background-size: 23px 23px;
-
+	display: flex;
+	&__icon{
+		width: 23px;
+		height: 23px;
+		fill: white;
+		margin: auto;
+	}
 	&:hover{
 		background-color: #d4d4d4;
 

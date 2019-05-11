@@ -71,7 +71,7 @@ $pout:17px;
 	overflow: hidden;
 	transition: transform 0.2s;
 	&:hover{
-		transform: scale(1.01);
+		// transform: scale(1.01);
 		transition: 0.5s;
 	}
 }
@@ -102,8 +102,12 @@ $pout:17px;
 	}
 	&__search{
 		position: relative;
+		height: 13px;
+		width: 13px;
+		fill:white;
 		top:2px;
 		margin-right: 7px;
+	
 	}
 }
 .imgHover{
@@ -128,15 +132,52 @@ $pout:17px;
 }
 .estimate{
 	margin-top: 14px;
-	&:hover .stare{
-		fill:#fff;
+	font-size: 0;
+	&__star{
+		height: 17px;
+		width: 18px;
+		fill:none;
+		stroke:#ffffff;
+		stroke-width:0.36252287;
+		stroke-linecap:round;
+		&:hover{
+			fill:#ffffff;
+			stroke:#dadada*1.2;
+		}
+		&:active{
+			fill:#d3d3d3;
+		}
 	}
+	&__star--full{
+		fill:#ffffff;
+
+	}
+	// &:hover .stare{
+	// 	fill:#fff;
+	// }
+
 }
 
-.mas{
+.masage{
 	margin-left: 25px;
 	position: relative;
-	top:3px
+	top:3px;
+	fill:rgb(255, 255, 255);
+	height: 22px;
+	width:27px;
+	transition: box-shadow 0.8s,border-radius 0.8s,transform 0.15s;
+	&:hover{
+		border-radius: 30%;
+		box-shadow:inset 0 0 5px 5px  #ffffff38,
+		 0 0 5px 5px  #ffffff38;
+		 transform: scale(1.1);
+		 transition: box-shadow 0.15s,border-radius 0.15s ,transform 0.15s;
+	}
+	&:active{
+		fill:rgba(255, 255, 255, 0.555);
+
+	}
+
 }
 
 .show{
@@ -154,9 +195,25 @@ $pout:17px;
 	padding: 7px 0 7px;	
 	&:hover{
 		transition: 0.3s;
-		box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);;
+		box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
 	}
+	&:active {
+		transition: 0.3s;
+		box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+		border: 2px solid #fff*0.8;
+
+	}
+
 }
+//--start sprite---------------------------------
+.iconSprite{
+	padding: 3px;
+	fill:rgb(255, 255, 255);
+	height: 30px;
+	width: 50px;
+	background-color: rgba(0, 0, 0, 0.164);
+}
+//--end sprite---------------------------------
 
 .tile-s {
 	&__img{
@@ -206,6 +263,32 @@ $pout:17px;
 		justify-content: flex-end;
 	}
 }
+.tile-s__asses{
+	font-size: 0;
+	.estimate{
+		&__star{
+			height: 14px;
+			width: 15px;
+			fill:none;
+			stroke:$yellow;
+			stroke-width:0.36252287;
+			stroke-linecap:round;
+			&--full{
+				fill:$yellow;
+			}
+			&:hover{
+				stroke:$yellow;
+			}
+			&:active{
+				fill:none;
+			}
+		}
+		&__star--full{
+			fill:$yellow;
+
+		}
+	}
+}
 
 
 .tile-s--green{
@@ -218,10 +301,8 @@ $pout:17px;
 	.show:hover{
 		background-color: $green-a;
 	}
-
 	.tile-s__img{
 		background:url('../image/layer-1.jpg') no-repeat center top /cover;
-		
 	}
 	.tile-s__cont{
 		border-top:3px solid $green;
@@ -233,22 +314,24 @@ $pout:17px;
 		color:$green;
 	}
 	.circle-icon{
-		@extend .hause;
 		background-color: $green;
 		background-size: 30px 23px;
 	}
+	.iconFilter{
+		height: 23px;
+		width: 30px;
+	}
 }
 .tile-s--yellow{
+	@extend .tile-s--green;
 	.imgHover{
 		&:hover .bgColor{
 			background-color: $yellow-a;
-			transition: 0.3s;
 		}
 	}
 	.show:hover{
 		background-color: $yellow-a;
 	}
-
 	.tile-s__img{
 		background:url('../image/layer-2.jpg') no-repeat center top /cover;
 	}
@@ -257,30 +340,25 @@ $pout:17px;
 	}
 
 	.tile-s__cost{
-		display: none;
 		background-color: $yellow;
 	}
 	.tile-s__category{
 		color:$yellow;
 	}
 	.circle-icon{
-		@extend .note;
 		background-color: $yellow;
-		background-size: 26px 26px;
 	}
-
 }
 .tile-s--purple{
+	@extend .tile-s--green;
 	.imgHover{
 		&:hover .bgColor{
 			background-color: $purple-a;
-			transition: 0.3s;
 		}
 	}
 	.show:hover{
 		background-color: $purple-a;
 	}
-
 	.tile-s__img{
 		background:url('../image/layer-4.jpg') no-repeat center top /cover;
 	}
@@ -289,16 +367,13 @@ $pout:17px;
 	}
 
 	.tile-s__cost{
-		display: none;
 		background-color: $purple;
 	}
 	.tile-s__category{
 		color:$purple;
 	}
 	.circle-icon{
-		@extend .bus;
 		background-color: $purple;
-		background-size: 26px 26px;
 	}
 
 }
@@ -398,6 +473,8 @@ $pout:17px;
 		}
 	}
 	.circle-icon{
+		width: 55px;
+		height: 55px;
 		margin: 0;
 		padding: 0;
 		position: relative;
@@ -415,6 +492,11 @@ $pout:17px;
 			z-index: 5;
 		}
 	}
+	.iconFilter{
+		height: 23px;
+		width: 30px;
+	}
+
 	.circle-avatar{
 		@extend %circle-m;
 		border:3px solid #e2dee0;
@@ -431,7 +513,37 @@ $pout:17px;
 		fill:$yellow;
 		cursor: pointer;
 	}
+	font-size: 0;
+	.estimate{
+		&__star{
+			height: 16px;
+			width: 17px;
+			fill:none;
+			stroke:$yellow;
+			stroke-width:0.36252287;
+			stroke-linecap:round;
+			&--full{
+				fill:$yellow;
+			}
+			&:hover, &--hover{
+				stroke:$yellow*1.2;
+				fill:$yellow;
+			}
+			&:active{
+				fill:none;
+			}
+		}
+		&__star--full{
+			fill:$yellow;
+
+		}
+	}
+
 }
+
+
+
+
 .lucy{
 	background: url('../image/layer-10.png') no-repeat center /59px 59px;
 }
@@ -447,9 +559,9 @@ $pout:17px;
 		background:url('../image/layer-5.jpg') no-repeat center top /cover;
 	}
 	.circle-icon{
-		@extend .hause;
+		@extend .iconFilter;
 		background-color: $green;
-		background-size: 30px 23px;
+		// background-size: 30px 23px;
 
 	}
 	.circle-avatar{
@@ -466,7 +578,7 @@ $pout:17px;
 		background:url('../image/layer-6.jpg') no-repeat center top /cover;
 	}
 	.circle-icon{
-		@extend .hause;
+		@extend .iconFilter;
 		background-color: $yellow;
 		background-size: 30px 23px;
 	}

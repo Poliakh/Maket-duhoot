@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg4548"
+   version="1.1"
+   viewBox="0 0 26.458333 26.458334"
+   height="100"
+   width="100">
+  <defs
+     id="defs4542" />
+  <metadata
+     id="metadata4545">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(0,-270.54165)"
+     id="layer1">
+    <g
+       transform="matrix(0.08480235,0,0,0.08453142,-91.925747,135.54497)"
+       id="Слой_x0020_1"
+       style="clip-rule:evenodd;fill-rule:evenodd;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision">
+      <metadata
+         id="CorelCorpID_0Corel-Layer" />
+      <g
+         id="layer1-5">
+        <path
+           d="m 1306,1886 h 35 v -16 h -35 z m -168,0 h 35 v -16 h -35 z m 24,-86 c 0,5 4,9 9,9 5,0 9,-4 9,-9 0,-5 -4,-9 -9,-9 -5,0 -9,4 -9,9 z m 136,-1 c 0,4 5,8 10,8 5,0 9,-4 9,-8 0,-5 -4,-9 -9,-9 -5,0 -10,4 -10,9 z m -109,1 c 0,9 -8,17 -18,17 -10,0 -18,-8 -18,-17 0,-10 8,-17 18,-17 10,0 18,7 18,17 z m 137,-1 c 0,9 -8,17 -18,17 -10,0 -18,-8 -18,-17 0,-10 8,-17 18,-17 10,0 18,7 18,17 z m -194,-109 v 61 c 0,3 3,6 7,6 h 200 c 4,0 7,-3 7,-6 v -61 c 0,-4 -3,-7 -7,-7 h -200 c -4,0 -7,3 -7,7 z m 207,-16 c 10,0 17,7 17,16 v 61 c 0,9 -7,16 -17,16 h -200 c -9,0 -17,-7 -17,-16 v -61 c 0,-9 8,-16 17,-16 z m -25,-33 c 6,0 10,4 10,9 0,5 -4,9 -10,9 h -149 c -6,0 -10,-4 -10,-9 0,-5 4,-9 10,-9 z m -129,-19 c -42,0 -76,32 -76,72 v 152 c 80,0 173,0 262,0 0,-51 0,-102 0,-152 0,-40 -34,-73 -76,-72 z m 110,-25 c 56,0 101,44 101,97 v 107 c 0,0 0,0 0,0 v 57 c 0,7 -6,12 -13,12 h -16 v 21 c 0,10 -9,19 -20,19 h -46 c -11,0 -20,-9 -20,-19 v -21 h -83 v 21 c 0,10 -9,19 -20,19 h -46 c -11,0 -20,-9 -20,-19 v -21 h -15 c -8,0 -13,-5 -13,-12 v -164 c 0,-53 45,-96 101,-96 z"
+           style="fill:#000000;fill-rule:nonzero"
+           id="rect14" />
+      </g>
+    </g>
+  </g>
+</svg>
