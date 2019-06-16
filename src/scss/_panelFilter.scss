@@ -22,7 +22,7 @@
 		margin: 0;
 		padding: 0;
 		border-top: none;
-		display: none;
+		// display: none;
 		position: absolute;
 		top: 35px;
 		left:6px;
@@ -42,7 +42,12 @@
 			white-space:nowrap;
 			text-overflow: ellipsis;
 			-o-text-overflow: ellipsis;	
-
+			font-size: 12px;
+			line-height: 33px;
+			font-family: 'Gotham-medium';
+			color: #96a6a7;
+			text-transform: uppercase;
+			padding-left:10px;
 
 			&:last-child{
 				border-radius:0 0 19px 19px;
@@ -51,15 +56,6 @@
 				background-color: rgb(241, 241, 241);
 				color:#74898b;
 			}
-		}
-		&__link {
-			font-size: 12px;
-			line-height: 33px;
-			font-family: 'Gotham-medium';
-			color: #96a6a7;
-			text-transform: uppercase;
-			padding-left:10px;
-		
 		}
 	}
 
