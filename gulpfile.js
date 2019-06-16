@@ -140,30 +140,19 @@ gulp.task('sass', ()=>{
 		.pipe(browserSync.reload({stream:true}))
 	});
 
-
-//css - работает
-// gulp.task('style',['sass'], ()=>{
-// 	gulp.src(path.src.css)
-// 		.pipe(concat('style.css'))
-// 		//.pipe(cssnano())
-// 		//.pipe(rename({suffix:'.min'}))
-// 		.pipe(gulp.dest(path.build.style))
-// 		.pipe(browserSync.reload({stream:true}));
-// });
-
 //script
 gulp.task('script', ()=>{
 	gulp.src(path.src.js)
 		.pipe(sourcemaps.init())
 		.pipe(plumber())
-		.pipe(concat('script.js'))
-		// .pipe(babel({
-		// 	presets: ['@babel/env']
-		// }))
+		// .pipe(concat('script.js'))
+		.pipe(babel({
+			presets: ['@babel/env']
+		}))
 		.pipe(gulpif(argv.prod, uglify()))//минимазция js
 		.pipe(gulpif(!argv.prod, sourcemaps.write()))
 		.pipe(gulp.dest(path.build.js))
-		// .pipe(browserSync.reload({stream:true})); //незачем
+		.pipe(browserSync.reload({stream:true})); //незачем
 });
 
 gulp.task('server',()=>{
