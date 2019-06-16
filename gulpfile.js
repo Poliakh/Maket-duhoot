@@ -16,6 +16,7 @@ let gulp			= require ('gulp'),
 	cleanCSS		= require('gulp-clean-css'),
 	gulpif			= require('gulp-if'),
 	argv 			= require('yargs').argv,
+	rigger 			= require('gulp-rigger');
 
 	imagemin		= require('gulp-imagemin'), // Подключаем библиотеку для работы с изображениями
 	pngquant		= require('imagemin-pngquant'), // Подключаем библиотеку для работы с png
@@ -104,9 +105,10 @@ gulp.task('htmlmin', ()=>{
 	gulp.src(path.src.html)
 		.pipe(sourcemaps.init())
 		.pipe(plumber())
-		.pipe(gulpImport(path.src.block))
-		.pipe(gulpImport(path.src.block))
-		// .pipe(gulpImport(path.src.block + 'other/'))
+		.pipe(rigger())
+		// .pipe(gulpImport(path.src.block))
+		// .pipe(gulpImport(path.src.block))
+		// // .pipe(gulpImport(path.src.block + 'other/'))
 		.pipe(gulpif(argv.prod,
 			htmlMin({collapseWhitespace: true,removeComments: true})))
 		.pipe(gulpif(!argv.prod, sourcemaps.write()))
