@@ -71,8 +71,9 @@ $pout:17px;
 	overflow: hidden;
 	transition: transform 0.2s;
 	&:hover{
-		// transform: scale(1.01);
+		transform: scale(1.01);
 		transition: 0.5s;
+		box-shadow: 13px 5px 16px 4px rgba(0, 0, 0, 0.1)
 	}
 }
 
