@@ -106,9 +106,6 @@ gulp.task('htmlmin', ()=>{
 		.pipe(sourcemaps.init())
 		.pipe(plumber())
 		.pipe(rigger())
-		// .pipe(gulpImport(path.src.block))
-		// .pipe(gulpImport(path.src.block))
-		// // .pipe(gulpImport(path.src.block + 'other/'))
 		.pipe(gulpif(argv.prod,
 			htmlMin({collapseWhitespace: true,removeComments: true})))
 		.pipe(gulpif(!argv.prod, sourcemaps.write()))
