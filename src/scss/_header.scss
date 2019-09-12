@@ -23,7 +23,7 @@
 	display: block;
 	height:47px;
 	width:156px;
-	background: url('../image/icon/logo_icon.svg') no-repeat ;
+	background: url('../image/logo_icon.svg') no-repeat ;
 	background-size: contain;
 	
 	
@@ -97,6 +97,7 @@
 }
 
 .login{
+	display: inline-block;
 	width: 141px;
 	min-height:inherit;
 	color: #ffffff;
@@ -148,14 +149,13 @@
 		
 	}
 	
-	&::before{
-		content: '';
-		display: inline-block;
-		width: 20px;
-		height: 17px;
-		background: url('../image/icon/human_icon.svg') no-repeat center /100%;
+	&__human{
+		width: 23px;
+		height: 23px;
+		fill: white;
+		// margin: auto;
 		position: absolute;
-		top: 28px;
+		top: 25px;
 		left: 35px;
 		
 	}

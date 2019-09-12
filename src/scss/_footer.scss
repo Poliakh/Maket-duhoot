@@ -29,7 +29,7 @@
 	}
 	&__input--icon{
 		padding-left:69px;
-		background: url("../image/icon/envelope_icon.svg") no-repeat 33px center  /18px 15px;
+		// background: url("../image/icon/envelope_icon.svg") no-repeat 33px center  /18px 15px;
 	}
 	&__button{
 		position: absolute;
@@ -102,7 +102,7 @@
 	color: #fff;
 }
 .follow{
-	&__icon{
+	&__icon s{
 		width: 158px;
 		display: flex;
 		justify-content: space-between;
@@ -123,7 +123,22 @@
 		}
 	}
 }
+.icon{
+	&-fol{
+		height: 26px;
+		width: 40px;
+		fill:rgb(253, 253, 253);
+		transition:transform 0.3s, fill 0.8s;
 
+		&:hover{
+			text-shadow:0 0 5px #fff; 
+			fill:rgb(212, 212, 212);
+			transform: scale(1.2);
+
+		}
+	}
+	
+}
 
 @media screen and (max-width:610px){
 	.contact__container{

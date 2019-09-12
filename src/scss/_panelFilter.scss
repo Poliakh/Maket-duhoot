@@ -122,14 +122,7 @@ margin:0 6px;
 		line-height: 33px;
 		box-shadow: none;
 		border:none;
-		&::after{
-			content: '';
-			display: inline-block;
-			width: 8px;
-			height: 12px;
-			margin-left: 13px;
-			background: url('../image/icon/geo_icon.svg') no-repeat center /contain;
-		}
+		
 		&:hover{
 			@extend .hover-white;
 			background-color: #24b666;
@@ -148,9 +141,16 @@ margin:0 6px;
 			width: 5px;
 			height: 5px;
 		}
-
-
 	}
+}
+.icon_geo{
+	// content: '';
+	// display: inline-block;
+	fill:#fff;
+	width: 8px;
+	height: 12px;
+	margin-left: 13px;
+	// background: url('../image/icon/geo_icon.svg') no-repeat center /contain;
 }
 
 
